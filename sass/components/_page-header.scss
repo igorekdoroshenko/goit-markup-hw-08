@@ -1,0 +1,11 @@
+/* -----------HEADER----------- */
+
+.header {
+    border: 1px solid #ececec;
+}
+
+.main-nav {
+@include flex-align-justify;
+}
+
+

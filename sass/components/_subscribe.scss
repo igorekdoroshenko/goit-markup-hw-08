@@ -1,0 +1,83 @@
+/*------------SUBSCRIBE FOOTER-----*/
+.subscribe {
+    display: inline-block;
+    margin-left: auto;
+    width: 570px;
+    height: 86px;
+    top: 0;
+    left: 0;
+}
+
+.subscribe__form {
+    background-color: #2f303a;
+}
+
+.subscribe__label {
+@include font-family;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: map-get($colors, 'main-white');
+
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.subscribe__wrapper {
+    display: inline-flex;
+}
+
+.subscribe__input {
+@include font-family;
+
+    @include font ($fs:16, $fw:400, $lh:1.25, $ls:0.03em);
+
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+    
+    color: map-get($colors, 'main-white');
+    background-color: map-get($colors, 'background-hiro-footer');
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: none;
+
+    display: inline-block;
+}
+
+.subscribe__btn {
+    width: 200px;
+    height: 50px;
+    background: #2196f3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+
+@include font-family;
+
+    @include font ($fs:16, $fw:700, $lh:1.88, $ls:0.06em);
+
+    color: map-get($colors, 'main-white');
+
+    position: relative;
+    margin-left: 12px;
+    padding-right: 62px;
+    padding-left: 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.subscribe__icons {
+    position: absolute;
+    top: 50%;
+    right: 28px;
+    transform: translateY(-50%);
+    fill: map-get($colors, 'main-white');
+}
+
+.subscribe__icons svg {
+    @include flex-align-justify;
+}

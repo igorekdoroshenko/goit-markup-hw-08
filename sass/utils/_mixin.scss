@@ -1,0 +1,36 @@
+@mixin transition-backgraund-color {
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@mixin transition-border-color {
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@mixin transition-color {
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin transition-fill {
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@mixin flex-align-justify {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin font ($fs:14, $fw:400, $lh:1.14, $ls:0.03em) {
+    font-size: $fs + px;
+    font-weight: $fw;
+    line-height: $lh;
+    letter-spacing: $ls;
+}
+@mixin font-family {
+    font-family: "Roboto";
+    font-style: normal;
+}

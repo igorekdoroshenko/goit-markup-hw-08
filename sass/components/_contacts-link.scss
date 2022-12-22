@@ -1,0 +1,41 @@
+.contact {
+    @include flex-align-justify;
+    margin-left: auto;
+}
+.contact a {
+    color: map-get($colors, 'secondary');
+    @include font ($fw:500, $ls:0.02em);
+
+    text-decoration: none;
+}
+.contact li {
+    margin-right: 50px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.contact.link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.contact__link {
+    @include flex-align-justify;
+
+    width: 100%;
+    height: 100%;
+    color: map-get($colors, 'secondary');
+
+    @include transition-color;
+
+    &:hover,
+    &:focus {
+        color: map-get($colors, 'accent');
+    }
+}
+.contact__icons {
+    fill: currentColor;
+    margin-right: 10px;
+}

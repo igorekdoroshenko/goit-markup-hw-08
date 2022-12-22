@@ -1,0 +1,42 @@
+.adress {
+    display: inline-block;
+    margin-right: 70px;
+}
+
+.adress__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.adress__sity {
+    display: block;
+
+@include font-family;
+
+    @include font ( $lh:1.71);
+
+    text-decoration: none;
+    
+    color: map-get($colors, 'main-background');
+    background: map-get($colors, 'background-hiro-footer');
+
+    @include transition-color;
+}
+
+.adress__text {
+    display: block;
+
+@include font-family;
+    @include font ( $lh:1.71);
+
+    text-decoration: none;
+    
+    color: map-get($colors, 'footer-mail-tel');
+    background: map-get($colors, 'background-hiro-footer');
+
+    @include transition-color;
+}
+
+.adress__list :hover,
+.adress__list :focus {
+    color: map-get($colors, 'accent');
+}

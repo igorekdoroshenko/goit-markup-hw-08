@@ -1,0 +1,21 @@
+.logo {
+    font-family: "Raleway";
+    font-style: normal;
+    @include font ($fs:26, $fw:700, $lh:1.19, $ls:0.03em);
+
+    color: map-get($colors, 'logo');
+    text-decoration: none;
+    
+    &-color {
+        margin-bottom: 28px;
+        display: block;
+    
+        color: map-get($colors, 'main-white');
+    }
+    &-style {
+        color: map-get($colors, 'accent');
+    }
+
+
+}
+
