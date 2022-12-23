@@ -9,12 +9,38 @@
 
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url(../images/fonhiro.jpg);
+        url(../images/header/header-mobile1x.jpg);
+        @include retina {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/header/header-mobile2x.jpg);
+        }
     background-repeat: no-repeat;
     background-size: 200px 452px 280px 452px;
     background-position: center;
     margin-left: auto;
     margin-right: auto;
+
+    @include tablet {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+    url(../images/header/header-tablet1x.jpg);
+        @include retina {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+    url(../images/header/header-tablet2x.jpg);
+        }
+    }
+    @include desktop {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+    url(../images/header/header-desktop1x.jpg);
+        @include retina {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/header/header-desktop2x.jpg);
+        }
+    }
 }
 
 .hero__title {

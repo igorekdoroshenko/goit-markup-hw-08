@@ -1,31 +1,45 @@
 /* -----------TEAMS----------- */
-.peaple-info {
-    padding-top: 94px;
-    padding-bottom: 94px;
+.people-info {
+
     background: map-get($colors, 'background-comand');
 }
 
-.peaple-info__list {
-    display: flex;
-    flex-wrap: wrap;
+.people-info__list {
+
+    @media screen and (min-width:768px) {
+        display: flex;
+        flex-wrap: wrap;
+       } 
 }
 
-.peaple-info__list .peaple-info__items {
-    margin-right: 30px;
+.people-info__list .people-info__items {
+   
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+
+    @media screen and (min-width:768px){
+        margin-right: 30px;
+        }
 }
 
-.peaple-info__items {
+.people-info__items {
     background: map-get($colors, 'main-white');
+    
+}
+.people-info__items img {
+    @media screen and (max-width:767px){
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
-.peaple-info__list li:nth-child(4n) {
+
+.people-info__list li:nth-child(4n) {
     margin-right: 0;
 }
 
-.peaple-info__thumb {
+.people-info__thumb {
     text-align: center;
     margin-top: 30px;
 

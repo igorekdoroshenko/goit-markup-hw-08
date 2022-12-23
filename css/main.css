@@ -49,7 +49,6 @@ ul {
 
 /* Universal classes */
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -151,6 +150,55 @@ ul {
   color: #757575;
 }
 
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-close {
+  display: none;
+}
+
+.menu-navigation {
+  background-color: antiquewhite;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+@media screen and (max-width: 767px) {
+  .menu-navigation {
+    /*display: none;*/
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    /*&.is-open {
+    display: block;
+    }*/
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-navigation {
+    display: flex;
+  }
+}
+
 .logo {
   font-family: "Raleway";
   font-style: normal;
@@ -173,6 +221,7 @@ ul {
 /* -----------HEADER----------- */
 .header {
   border: 1px solid #ececec;
+  position: relative;
 }
 
 .main-nav {
@@ -291,12 +340,37 @@ ul {
   padding-bottom: 200px;
   max-width: 1600px;
   max-height: 600px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/fonhiro.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header/header-mobile1x.jpg);
   background-repeat: no-repeat;
   background-size: 200px 452px 280px 452px;
   background-position: center;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header/header-mobile2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header/header-tablet1x.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header/header-tablet2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header/header-desktop1x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header/header-desktop2x.jpg);
+  }
 }
 
 .hero__title {
@@ -314,17 +388,29 @@ ul {
   padding-top: 94px;
 }
 
-.feature__list {
-  display: flex;
-  flex-wrap: wrap;
+@media screen and (min-width: 768px) {
+  .feature__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .feature__list li {
   width: 270px;
-  margin-right: 30px;
 }
-.feature__list li:nth-child(4n) {
-  margin-right: 0;
+@media screen and (max-width: 767px) {
+  .feature__list li {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .feature__list li {
+    margin-right: 30px;
+  }
+  .feature__list li:nth-child(4n) {
+    margin-right: 0;
+  }
 }
 
 .feature__image {
@@ -338,8 +424,10 @@ ul {
 }
 
 /* -----------IMAGES----------- */
-.section > image {
-  padding-top: 10px;
+@media screen and (max-width: 575px) {
+  .image {
+    display: none;
+  }
 }
 
 .image__list {
@@ -378,36 +466,47 @@ ul {
 }
 
 /* -----------TEAMS----------- */
-.peaple-info {
-  padding-top: 94px;
-  padding-bottom: 94px;
+.people-info {
   background: #f5f4fa;
 }
 
-.peaple-info__list {
-  display: flex;
-  flex-wrap: wrap;
+@media screen and (min-width: 768px) {
+  .people-info__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
-.peaple-info__list .peaple-info__items {
-  margin-right: 30px;
+.people-info__list .people-info__items {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+@media screen and (min-width: 768px) {
+  .people-info__list .people-info__items {
+    margin-right: 30px;
+  }
+}
 
-.peaple-info__items {
+.people-info__items {
   background: #ffffff;
 }
 
-.peaple-info__list li:nth-child(4n) {
+@media screen and (max-width: 767px) {
+  .people-info__items img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.people-info__list li:nth-child(4n) {
   margin-right: 0;
 }
 
-.peaple-info__thumb {
+.people-info__thumb {
   text-align: center;
   margin-top: 30px;
 }
-.peaple-info__thumb p {
+.people-info__thumb p {
   padding-bottom: 16px;
 }
 
@@ -452,6 +551,12 @@ ul {
 }
 
 /* -----------CLIENTS----------- */
+@media screen and (max-width: 575px) {
+  .clients {
+    display: none;
+  }
+}
+
 .clients__list {
   display: flex;
   align-items: center;

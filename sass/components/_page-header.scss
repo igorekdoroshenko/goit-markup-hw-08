@@ -2,10 +2,10 @@
 
 .header {
     border: 1px solid #ececec;
+    position: relative;
 }
 
 .main-nav {
 @include flex-align-justify;
+
 }
-
-
