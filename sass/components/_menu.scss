@@ -9,10 +9,10 @@
         display: none;
     }
 }   
-.menu-button .icon-cross {
+.menu-button .icon-menu {
     display: none;
 }
-.menu-button.is-open .icon-cross {
+.menu-button.is-open .icon-menu {
     display: block;
 }
 .menu-button.is-open .icon-close {
@@ -28,14 +28,14 @@
     font-size: 14px;
 
     @media screen and (max-width:767px) {
-        /*display: none;*/
+        display: none;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        /*&.is-open {
+        &.is-open {
         display: block;
-        }*/
+        }
     }
     @media screen and (min-width:768px) {
         display: flex;

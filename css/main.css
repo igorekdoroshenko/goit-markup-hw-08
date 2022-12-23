@@ -163,11 +163,11 @@ ul {
   }
 }
 
-.menu-button .icon-cross {
+.menu-button .icon-menu {
   display: none;
 }
 
-.menu-button.is-open .icon-cross {
+.menu-button.is-open .icon-menu {
   display: block;
 }
 
@@ -183,14 +183,14 @@ ul {
 }
 @media screen and (max-width: 767px) {
   .menu-navigation {
-    /*display: none;*/
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    /*&.is-open {
+  }
+  .menu-navigation.is-open {
     display: block;
-    }*/
   }
 }
 @media screen and (min-width: 768px) {
