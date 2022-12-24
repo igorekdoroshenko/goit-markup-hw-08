@@ -1,5 +1,5 @@
 
-.menu-button {
+.menu-open {
     /*display: inline-flex;*/
     margin-left: auto;
     padding: 0;
@@ -9,17 +9,17 @@
         display: none;
     }*/
 }   
-/*.menu-button .icon-menu {
+/*.menu-open .icon-menu {
     display: none;
 }
-.menu-button.is-open .icon-menu {
+.menu-open.is-open .icon-menu {
     display: block;
 }
-.menu-button.is-open .icon-close {
+.menu-open.is-open .icon-close {
     display: none;
 }*/
 
-.menu-navigation {
+.mobile-menu {
     position: fixed;
     width: 100%;
     height: 796px;
