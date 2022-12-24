@@ -1,16 +1,26 @@
 .logo {
     font-family: "Raleway";
     font-style: normal;
-    @include font ($fs:26, $fw:700, $lh:1.19, $ls:0.03em);
+    @include font ($fs: 24, $fw: 700, $lh: 1.16, $ls: 0.03em);
+    @include desktop {
+        @include font ($fs: 26, $fw: 700, $lh: 1.19, $ls: 0.03em);
+    }
+
 
     color: map-get($colors, 'logo');
     text-decoration: none;
     
     &-color {
-        margin-bottom: 28px;
-        display: block;
-    
         color: map-get($colors, 'main-white');
+        margin-bottom: 20px;
+        
+        @include desktop {
+            margin-bottom: 28px;
+            display: block;
+        }
+        
+    
+        
     }
     &-style {
         color: map-get($colors, 'accent');

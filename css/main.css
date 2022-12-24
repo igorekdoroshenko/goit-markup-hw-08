@@ -28,6 +28,8 @@ body {
 
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 ul {
@@ -49,23 +51,24 @@ ul {
 
 /* Universal classes */
 .container {
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
 }
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    width: 450px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    width: 748px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    width: 1170px;
   }
 }
 
@@ -151,25 +154,18 @@ ul {
 }
 
 .menu-open {
-  /*display: inline-flex;*/
+  display: inline-flex;
   margin-left: auto;
-  padding: 0;
+  padding-right: 8px;
   border: 0;
   background-color: transparent;
-  /*@media screen and (min-width:768px) {
-      display: none;
-  }*/
+}
+@media screen and (min-width: 768px) {
+  .menu-open {
+    display: none;
+  }
 }
 
-/*.menu-open .icon-menu {
-    display: none;
-}
-.menu-open.is-open .icon-menu {
-    display: block;
-}
-.menu-open.is-open .icon-close {
-    display: none;
-}*/
 .mobile-menu {
   position: fixed;
   width: 100%;
@@ -179,27 +175,30 @@ ul {
   left: 0px;
   right: 0px;
   padding-left: 40px;
+  /*& .container {
+      display: block;
+      width: 100%;
+      padding: 0px;
+  }*/
   /*text-align: center;
   padding: 20px;
   font-size: 14px;*/
-  /* @media screen and (max-width:767px) {
-       display: none;
-       position: absolute;
-       top: 100%;
-       left: 0;
-       width: 100%;
-       &.is-open {
-       display: block;
-       }
-   }
-   @media screen and (min-width:768px) {
-       display: flex;
-   }*/
 }
-.mobile-menu .container {
+
+.menu-content {
+  padding: 48px 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.menu-close {
   display: block;
-  width: 100%;
-  padding: 0px;
+  margin-left: auto;
+  margin-right: 0;
+  border: 0;
+  background-color: transparent;
 }
 
 /*--------navigation-------*/
@@ -304,17 +303,30 @@ ul {
 .logo {
   font-family: "Raleway";
   font-style: normal;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 1.19;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: #000000;
   text-decoration: none;
 }
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
+}
 .logo-color {
-  margin-bottom: 28px;
-  display: block;
   color: #ffffff;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .logo-color {
+    margin-bottom: 28px;
+    display: block;
+  }
 }
 .logo-style {
   color: #2196f3;
@@ -324,7 +336,7 @@ ul {
 .header {
   border: 1px solid #ececec;
   /*position: relative;*/
-  position: absolute;
+  /*position: absolute;*/
 }
 
 .main-nav {
@@ -587,13 +599,10 @@ ul {
   background: #f5f4fa;
 }
 
-@media screen and (min-width: 768px) {
-  .people-info__list {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.people-info__list {
+  display: flex;
+  flex-wrap: wrap;
 }
-
 .people-info__list .people-info__items {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -608,13 +617,10 @@ ul {
   background: #ffffff;
 }
 
-@media screen and (max-width: 767px) {
-  .people-info__items img {
-    margin-left: auto;
-    margin-right: auto;
-  }
+.people-info__items img {
+  margin-left: auto;
+  margin-right: auto;
 }
-
 .people-info__list li:nth-child(4n) {
   margin-right: 0;
 }
