@@ -151,52 +151,154 @@ ul {
 }
 
 .menu-button {
-  display: inline-flex;
-  margin: 0;
+  /*display: inline-flex;*/
+  margin-left: auto;
   padding: 0;
   border: 0;
   background-color: transparent;
+  /*@media screen and (min-width:768px) {
+      display: none;
+  }*/
 }
-@media screen and (min-width: 768px) {
-  .menu-button {
+
+/*.menu-button .icon-menu {
     display: none;
-  }
 }
-
-.menu-button .icon-menu {
-  display: none;
-}
-
 .menu-button.is-open .icon-menu {
-  display: block;
-}
-
-.menu-button.is-open .icon-close {
-  display: none;
-}
-
-.menu-navigation {
-  background-color: antiquewhite;
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-}
-@media screen and (max-width: 767px) {
-  .menu-navigation {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-  }
-  .menu-navigation.is-open {
     display: block;
-  }
 }
-@media screen and (min-width: 768px) {
-  .menu-navigation {
-    display: flex;
-  }
+.menu-button.is-open .icon-close {
+    display: none;
+}*/
+.menu-navigation {
+  position: fixed;
+  width: 100%;
+  height: 796px;
+  background-color: #ffffff;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  padding-left: 40px;
+  /*text-align: center;
+  padding: 20px;
+  font-size: 14px;*/
+  /* @media screen and (max-width:767px) {
+       display: none;
+       position: absolute;
+       top: 100%;
+       left: 0;
+       width: 100%;
+       &.is-open {
+       display: block;
+       }
+   }
+   @media screen and (min-width:768px) {
+       display: flex;
+   }*/
+}
+.menu-navigation .container {
+  display: block;
+  width: 100%;
+  padding: 0px;
+}
+
+/*--------navigation-------*/
+.mob-navigation {
+  /*@include flex-align-justify;
+   margin-left: 93px;*/
+}
+
+.mob-navigation li {
+  /*margin-right: 50px;*/
+  /*&:last-child {
+      margin-right: 0;
+  }*/
+}
+
+.mob-navigation a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #212121;
+  text-decoration: none;
+}
+
+.mob-navigation .list {
+  cursor: pointer;
+}
+
+.mob-navigation .mob-navigation .current {
+  color: #2196f3;
+}
+
+.mob-navigation .mob-navigation__link {
+  /*display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;*/
+}
+
+.mob-navigation__link.link.mob-current {
+  /*position: relative;
+  color: map-get($colors, 'accent');*/
+}
+
+.mob-current::after {
+  content: "";
+  /*display: block;
+  width: 100%;
+  height: 4px;
+
+  bottom: 0;
+  position: absolute;*/
+  background-color: #2196f3;
+  border-radius: 2px;
+}
+
+/*----------contacts------*/
+.mob-contact {
+  /*@include flex-align-justify;
+  margin-left: auto;*/
+}
+
+.mob-contact a {
+  color: #757575;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.mob-contact li {
+  /*margin-right: 50px;*/
+  /*&:last-child {
+      margin-right: 0;
+  }*/
+}
+
+.mob-contact.link {
+  /*display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;*/
+}
+
+.mob-contact__link {
+  /* @include flex-align-justify;*/
+  /*width: 100%;
+  height: 100%;*/
+  color: #757575;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-contact__link:hover, .mob-contact__link:focus {
+  color: #2196f3;
+}
+
+.mob-contact__icons {
+  fill: currentColor;
+  /*margin-right: 10px;*/
 }
 
 .logo {
@@ -221,7 +323,8 @@ ul {
 /* -----------HEADER----------- */
 .header {
   border: 1px solid #ececec;
-  position: relative;
+  /*position: relative;*/
+  position: absolute;
 }
 
 .main-nav {
@@ -230,11 +333,18 @@ ul {
   justify-content: center;
 }
 
-.navigation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 93px;
+@media screen and (max-width: 767px) {
+  .navigation {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 93px;
+  }
 }
 
 .navigation li {
@@ -283,11 +393,18 @@ ul {
   border-radius: 2px;
 }
 
-.contact {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
+@media screen and (max-width: 767px) {
+  .contact {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
 }
 
 .contact a {

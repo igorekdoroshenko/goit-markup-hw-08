@@ -1,6 +1,12 @@
 .contact {
-    @include flex-align-justify;
-    margin-left: auto;
+    @media screen and (max-width:767px) {
+        display: none;
+        }
+    @include tablet {
+        @include flex-align-justify;
+        margin-left: auto;
+    }
+
 }
 .contact a {
     color: map-get($colors, 'secondary');
