@@ -75,8 +75,16 @@
 }
 
 .pretitle {
-    margin-bottom: 50px;
-    @include font (36, null, 1.16);
+    margin-bottom: 30px;
+    @include font (28, null, 1.17);
+
+    @media screen and (min-width:1200px) {
+        margin-bottom: 50px;
+        @include font (36, null, 1.16);
+    }
+        
+    
+
 
     text-align: center;
     color: map-get($colors, 'main');
