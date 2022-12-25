@@ -528,9 +528,20 @@ ul {
 
 /* -----------FEATURES----------- */
 .feature {
-  padding-top: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .feature {
+    padding-top: 94px;
+    padding-bottom: 0px;
+  }
 }
 
+.feature__list {
+  margin-right: -30px;
+  margin-bottom: -30px;
+}
 @media screen and (min-width: 768px) {
   .feature__list {
     display: flex;
@@ -538,32 +549,60 @@ ul {
   }
 }
 
-.feature__list li {
-  width: 270px;
+.feature__list .feature__item {
+  margin-right: 30px;
+  margin-bottom: 30px;
 }
 @media screen and (max-width: 767px) {
-  .feature__list li {
-    margin-left: auto;
-    margin-right: auto;
+  .feature__list .feature__item {
+    width: 450px;
   }
 }
 @media screen and (min-width: 768px) {
-  .feature__list li {
-    margin-right: 30px;
+  .feature__list .feature__item {
+    width: calc((100% - 60px) / 2);
   }
-  .feature__list li:nth-child(4n) {
-    margin-right: 0;
+}
+@media screen and (min-width: 1200px) {
+  .feature__list .feature__item {
+    width: calc((100% - 120px) / 4);
   }
 }
 
+@media screen and (max-width: 767px) {
+  .feature__list .feature__item {
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1119px) {
+  .feature__list .feature__item:nth-child(2n) {
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature__list .feature__item:last-child {
+    margin-right: 0px;
+  }
+}
 .feature__image {
-  width: 270px;
+  width: 450px;
   height: 120px;
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #f5f4fa;
-  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .feature__image {
+    width: 354px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature__image {
+    width: 270px;
+  }
 }
 
 /* -----------IMAGES----------- */
@@ -649,12 +688,12 @@ ul {
 
 @media screen and (max-width: 767px) {
   .people-info__list li:nth-child(n+4) {
-    margin-bottom: 0;
+    margin-bottom: 0px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1119px) {
   .people-info__list li:nth-child(n+3) {
-    margin-bottom: 0;
+    margin-bottom: 0px;
   }
 }
 .people-info__thumb {
@@ -716,18 +755,6 @@ ul {
 }
 
 /* -----------CLIENTS----------- */
-@media screen and (max-width: 575px) {
-  .clients {
-    display: none;
-  }
-}
-
-.clients__list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .clients__items {
   width: 170px;
   height: 92px;
