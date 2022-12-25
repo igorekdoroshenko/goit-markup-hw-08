@@ -1,4 +1,4 @@
-/* -----------HEADER----------- */
+    /* -----------HEADER----------- */
 
 .header {
     border: 1px solid #ececec;
@@ -8,5 +8,8 @@
 
 .main-nav {
 @include flex-align-justify;
+    @media screen and (max-width:767px) {
+        height: 60px;
+    }
 
 }
