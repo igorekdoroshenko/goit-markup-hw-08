@@ -1,8 +1,33 @@
 .adress {
-    display: inline-block;
-    margin-right: 70px;
+    @media screen and (max-width:767px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    @media screen and (min-width:1200px) {
+        display: inline-block;
+        margin-right: 70px;
+    }
+
 }
 
+.adress__list {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+.adress__list .adress__item {
+    @media screen and (max-width:1199px) {
+        text-align: center;
+    }
+    
+}
 .adress__item:not(:last-child) {
     margin-bottom: 9px;
 }
