@@ -3,17 +3,36 @@
 
 }
 .clients__list {
-    // @include flex-align-justify;
+    margin-right: -30px;
+    margin-bottom: -30px;
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width:1200px) {
+        @include flex-align-justify;
+    }
+    
 }
 
 .clients__items {
+    margin-right: 30px;
+    margin-bottom: 30px;
     width: 170px;
     height: 92px;
-
-    &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+        width: calc((100% - 60px) / 2);
+        
+    }
+    @media screen and  (min-width: 768px) and (max-width: 1199px) {
+        width: calc((100% - 90px) / 3);
+        
+    }
+    @media screen and (min-width:1200px) {
+        &:not(:last-child) {
             margin-right: 30px;
         }
+    }
 }
+
 
 .clients__link {
     @include flex-align-justify;

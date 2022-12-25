@@ -132,7 +132,7 @@
       </div>
     </header> -->
     <main>
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
           <h1 class="hero__title">
             Ефективні рішення для <br />
@@ -142,7 +142,7 @@
             Замовити послугу
           </button>
         </div>
-      </section> -->
+      </section>
       <section class="feature">
         <div class="container">
           <h2 class="visually-hidden">Особливості</h2>
@@ -197,43 +197,64 @@
           </ul>
         </div>
       </section>
-      <!-- <section class="section image">
+      <section class="section image">
         <div class="container">
           <h2 class="pretitle">Чим ми займаємося</h2>
           <ul class="image__list">
             <li>
               <div class="image__thumb">
-                <img
+                <picture>
+                  <source
+                  srcset="./images/img1-desktop1x.jpg 1x,
+                  ./images/img1-desktop2x.jpg 2x"
+                  media="(min-width:1200px)"
+                  />
+                  <img
                   width="370"
-                  src="./images/img1.jpg"
+                  src="./images/img1-desktop1x.jpg"
                   alt="чоловік працює на планшеті з клавіатурою"
-                />
+                  />
+                </picture>
                 <p class="image__desc">Десктопні додатки</p>
               </div>
             </li>
             <li>
               <div class="image__thumb">
-                <img
+                <picture>
+                  <source
+                  srcset="./images/img2-desktop1x.jpg 1x,
+                  ./images/img2-desktop2x.jpg 2x"
+                  media="(min-width:1200px)"
+                  />
+                  <img
                   width="370"
-                  src="./images/img2.jpg"
+                  src="./images/img2-desktop1x.jpg"
                   alt="дівчина працює на ноутбуці з смартфоном"
-                />
+                  />
+                </picture>
                 <p class="image__desc">Мобільні додатки</p>
               </div>
             </li>
             <li>
               <div class="image__thumb">
-                <img
+                <picture>
+                  <source
+                  srcset="./images/img3-desktop1x.jpg 1x,
+                  ./images/img3-desktop2x.jpg 2x"
+                  media="(min-width:1200px)"
+                  />
+                  <img
                   width="370"
-                  src="./images/img3.jpg"
+                  src="./images/img3-desktop1x.jpg"
                   alt="вибір кольору на планшеті"
-                />
+                  />
+                </picture>
                 <p class="image__desc">Дизайнерські рішення</p>
               </div>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <section class="section people-info">
         <div class="container">
           <h2 class="pretitle">Наша команда</h2>
@@ -563,7 +584,7 @@
         </div>
       </section>
     </main>
-    <!-- <footer class="page-footer">
+    <footer class="page-footer">
       <div class="page-footer__container container">
         <div class="adress">
           <a href="index.html" class="logo logo-color"
@@ -645,7 +666,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">

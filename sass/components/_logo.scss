@@ -1,7 +1,10 @@
 .logo {
     font-family: "Raleway";
     font-style: normal;
-    @include font ($fs: 24, $fw: 700, $lh: 1.16, $ls: 0.03em);
+    @media screen and (max-width:1199px){
+        @include font ($fs: 24, $fw: 700, $lh: 1.16, $ls: 0.03em);
+    }
+    
     @include desktop {
         @include font ($fs: 26, $fw: 700, $lh: 1.19, $ls: 0.03em);
     }

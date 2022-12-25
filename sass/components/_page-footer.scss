@@ -1,16 +1,23 @@
 /* -----------FOOTER----------- */
 .page-footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-    background: map-get($colors, 'background-hiro-footer');
-@include font-family;
-    
-    @include font ($lh:1.71);
+  background: map-get($colors, 'background-hiro-footer');
+  @include font-family;
 
+  @include font($lh: 1.71);
 }
 
 .page-footer__container {
-    display: flex;
+  
+  @media screen and (max-width:767px) {
+    display: block;
+  }
+  @media screen and (min-width:1200px){
+        display: flex;
     align-items: baseline;
+  }
+
+
 }

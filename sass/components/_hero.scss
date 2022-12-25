@@ -2,10 +2,17 @@
 .hero {
     background: map-get($colors, 'background-hiro-footer');
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    max-width: 1600px;
-    max-height: 600px;
+    @media screen and (max-width:1199px){
+        padding-top: 118px;
+        padding-bottom: 118px;
+    }
+    @media screen and (min-width:1200px){
+        padding-top: 200px;
+        padding-bottom: 200px;
+        // max-width: 1600px;
+        // max-height: 600px;
+    }
+
 
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
@@ -16,7 +23,7 @@
         url(../images/header/header-mobile2x.jpg);
         }
     background-repeat: no-repeat;
-    background-size: 200px 452px 280px 452px;
+    // background-size: 200px 452px 280px 452px;
     background-position: center;
     margin-left: auto;
     margin-right: auto;
@@ -44,9 +51,18 @@
 }
 
 .hero__title {
-    @include font ($fs:44, $fw:900, $lh:1.36, $ls:0.06em);
+
+  
 
     text-align: center;
     text-transform: uppercase;
     color: map-get($colors, 'main-background');
+
+    @media screen and (max-width:1199px){
+        @include font ($fs:26, $fw:900, $lh:1.61, $ls:0.06em);
+    }
+
+    @media screen and (min-width:1200px){
+        @include font ($fs:44, $fw:900, $lh:1.36, $ls:0.06em);
+    }
 }
