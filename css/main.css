@@ -382,6 +382,27 @@ ul {
   /*margin-right: 10px;*/
 }
 
+/*-------lINK------*/
+.mob-social {
+  margin-top: 64px;
+  display: flex;
+}
+
+.mob-social a {
+  color: #2196f3;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
+  transform: rotate(90deg);
+}
+
+.mob-social__item:last-child {
+  padding-right: 0px;
+}
+
 .logo {
   font-family: "Raleway";
   font-style: normal;
