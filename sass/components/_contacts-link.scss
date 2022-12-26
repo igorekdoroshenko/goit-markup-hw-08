@@ -2,7 +2,13 @@
     @media screen and (max-width:767px) {
         display: none;
         }
-    @include tablet {
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-left: 96px;
+    }
+    @include desktop {
         @include flex-align-justify;
         margin-left: auto;
     }
@@ -15,11 +21,20 @@
     text-decoration: none;
 }
 .contact li {
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        margin-bottom: 10px;
+    }
+    @media screen and (min-width:1200px) {
     margin-right: 50px;
 
     &:last-child {
         margin-right: 0;
+    } 
     }
+
+}
+.contact li:last-child {
+    margin-bottom: 0px;
 }
 .contact.link {
     display: block;
@@ -43,5 +58,5 @@
 }
 .contact__icons {
     fill: currentColor;
-    margin-right: 10px;
+    margin-right: 8px;
 }

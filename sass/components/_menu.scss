@@ -1,10 +1,13 @@
 
 .menu-open {
-    display: inline-flex;
+    @include flex-align-justify;
     margin-left: auto;
-    padding-right: 8px;
+    margin-right: auto;
+    top: 21px;
+    right: 25px;
     border: 0;
     background-color: transparent;
+    position: absolute;
     @media screen and (min-width:768px) {
         display: none;
     }
@@ -13,9 +16,12 @@
 .mobile-menu {
     position: fixed;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 480px;
+    height: 796px;
+    overflow-y: auto;
     background-color: map-get($colors, 'main-white');
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     // top: 0px;
     // left: 0px;
     // right: 0px;
@@ -38,6 +44,7 @@
     width: 100%;
     height: 796px;
     // justify-content: space-between;
+    
 }
 
 .menu-close {
@@ -49,6 +56,9 @@
     border: 0;
     background-color: transparent;
     position: absolute;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
     &:hover,
     &:focus {
         color: map-get($colors, 'accent');
@@ -222,18 +232,36 @@
     display: flex;
 }
 
-.mob-social__items {}
+.mob-social__items {
+    
+}
+    
+.mob-social__link {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
 
-.mob-social__link {}
-
-.mob-social a {
+.mob-social .mob-social__items a {
     color: map-get($colors, 'accent');
     @include font ($fs: 18, $fw: 500, $lh: 1.22, $ls: 0.02em);
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    
     padding-right: 10px;
+    padding-left: 10px;
 
     transform: rotate(90deg);
 }
-.mob-social__item:last-child {
+.mob-social a:last-child {
     padding-right: 0px;
+    border-right:none;
+}
+.mob-social a:first-child {
+    padding-left: 0px;}
+    
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.mobile-menu.is-hidden .menu-content {
+    transform: translate(-50%, -50%) scale(0);
 }

@@ -5,9 +5,12 @@
     
     @include tablet {
         @include flex-align-justify;
+        margin-left: 88px;
+    }
+    @include desktop {
+        @include flex-align-justify;
         margin-left: 93px;
     }
-
 }
 
 .navigation li {

@@ -26,7 +26,7 @@
     text-transform: uppercase;
     color: map-get($colors, 'main-white');
     
-    @media screen and (max-width:1119px) {
+    @media screen and (max-width:1199px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +40,7 @@
 }
 
 .subscribe__wrapper {
-    @media screen and (max-width: 1119px) {
+    @media screen and (max-width: 1199px) {
     display: flex;
     flex-direction: column;
     justify-content: center;

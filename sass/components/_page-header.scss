@@ -7,9 +7,13 @@
 }
 
 .main-nav {
+    
 @include flex-align-justify;
     @media screen and (max-width:767px) {
         height: 60px;
+        justify-content: flex-start;
     }
-
+        @media screen and (min-width:768px) {
+        height: 80px;
+    }
 }
