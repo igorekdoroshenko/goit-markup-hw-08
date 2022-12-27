@@ -9,7 +9,7 @@
     margin-right: auto;
     }
 
-    @media screen and (min-width:1200px) {
+    @include desktop {
         display: inline-block;
         margin-right: 70px;
     }

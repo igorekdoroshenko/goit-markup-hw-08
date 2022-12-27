@@ -3,20 +3,17 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
-    @media screen and (min-width: 1200px) {
-        padding-top: 94px;
-        padding-bottom: 0px;
+    @include desktop {
+    padding-top: 94px;
+    padding-bottom: 0px;
     }
-    
-        
-    
-    
+          
+       
 }
 
 .feature__list {
-    margin-right: -30px;
-    margin-bottom: -30px;
-   @media screen and (min-width:768px) {
+    gap:30px;
+    @include tablet {
     display: flex;
     flex-wrap: wrap;
     
@@ -27,53 +24,32 @@
 .feature__list .feature__item {
     
     @media screen and (max-width:767px) {
-        width: 450px;
-        // padding-left: 15px;
-        
-    //     margin-left: auto;
-    //     margin-right: auto;
-    }
-    
-    margin-right: 30px;
+    width: 450px;
     margin-bottom: 30px;
-    // @media screen and (max-width:767px){
 
-    // }
+    }
+     
     
-    
-    @media screen and (min-width: 768px) {
-        // width: 354px;
-        width: calc((100% - 60px) / 2);
-        // margin-right: 30px;
+    @include tablet {
+    width: calc((100% - 30px) / 2);
         
     }
 
-    @media screen and (min-width: 1200px) {
-        // width: 270px;
-        width: calc((100% - 120px) / 4);
-        // margin-right: 30px;
-        // margin-bottom: 0px;
+    @include desktop {
+    width: calc((100% - 90px) / 4);
+
     }
 
 }
 @media screen and (max-width:767px) {
-    .feature__list .feature__item {
-        margin-right: 0px;
+    .feature__list .feature__item:last-child {
+    margin-bottom: 0px;
         }
 }
-@media screen and (min-width:768px) and (max-width:1199px) {
-    .feature__list .feature__item:nth-child(2n) {
-        margin-right: 0px;
-    }
-}
-@media screen and (min-width:1200px) {
-    .feature__list .feature__item:last-child {
-        margin-right: 0px;
-    }
-}
+
 .feature__item .title {
     @media screen and (max-width:767px){
-        text-align: center
+    text-align: center
     }
     
 }
@@ -82,16 +58,15 @@
     height: 120px;
     
     margin-bottom: 30px;
-    @media screen and (min-width: 768px) {
+    @include tablet {
         width: 354px;
         margin-bottom: 30px;
     }
-    @media screen and (min-width: 1200px) {
+    @include desktop {
         width: 270px;
     }
 
-@include flex-align-justify;
-
+    @include flex-align-justify;
     background-color: map-get($colors, 'background-comand');
 
     

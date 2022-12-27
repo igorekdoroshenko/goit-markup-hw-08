@@ -5,29 +5,30 @@
 }
 
 .people-info__list {
-    margin-right: -30px;
-    margin-bottom: -30px;
-    @media screen and (min-width:768px) {
+
+    @include tablet {
             display: flex;
             flex-wrap: wrap;
+            gap: 30px;
        } 
 }
 
-.people-info__list .people-info__items {
-    margin-right: 30px;
-    margin-bottom: 30px;
-    width: 450px;
+.people-info__items {
+    width: 100%;
+    @media screen and (max-width:767px) {
+        margin-bottom: 30px;
+    }
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
    
-    @media screen and (min-width: 768px) {
-        width: calc((100% - 60px) / 2);
+    @include tablet {
+        width: calc((100% - 30px) / 2);
         }
     
-    @media screen and (min-width: 1200px) {
-        width: calc((100% - 120px) / 4);
-        margin-bottom: 0px;
+    @include desktop {
+        width: calc((100% - 90px) / 4);
+        
         }
 
     
@@ -37,13 +38,7 @@
     background: map-get($colors, 'main-white');
     
 }
-// .people-info__items img {
-//     // margin-left: auto;
-//     // margin-right: auto;
-//     @media screen and (max-width:767px){
 
-//     }
-// }
 
 @media screen and (max-width:767px) {
     .people-info__list li:nth-child(n+4) {
