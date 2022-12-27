@@ -71,6 +71,12 @@
         margin-right: 0px;
     }
 }
+.feature__item .title {
+    @media screen and (max-width:767px){
+        text-align: center
+    }
+    
+}
 .feature__image {
     width: 450px;
     height: 120px;
