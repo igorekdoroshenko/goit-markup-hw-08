@@ -16,7 +16,16 @@
 }
 .contact a {
     color: map-get($colors, 'secondary');
-    @include font ($fw:500, $ls:0.02em);
+    @include mobile {
+        @include font ($fs: 12, $fw: 500, $lh: 1.17, $ls: 0.02em)
+    }
+    @include tablet {
+        @include font ($fs: 12, $fw: 500, $lh: 1.17, $ls: 0.02em)
+        }
+    @include desktop {
+        @include font ($fw: 500, $ls: 0.02em);
+    }
+    
 
     text-decoration: none;
 }

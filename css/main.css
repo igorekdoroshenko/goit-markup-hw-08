@@ -212,9 +212,11 @@ ul {
   padding-left: 40px;
   padding-top: 48px;
   padding-bottom: 48px;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
-  height: 796px;
+  height: 100%;
 }
 
 .menu-close {
@@ -273,10 +275,6 @@ ul {
 }
 
 /*----------contacts------*/
-.mob-contact {
-  margin-top: 302px;
-}
-
 .mob-contact a {
   color: #2196f3;
   font-size: 34px;
@@ -539,11 +537,31 @@ ul {
 
 .contact a {
   color: #757575;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
   text-decoration: none;
+}
+@media screen and (min-width: 480px) {
+  .contact a {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact a {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact a {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -686,7 +704,7 @@ ul {
 
 @media screen and (max-width: 767px) {
   .feature__list .feature__item {
-    width: 450px;
+    width: 100%;
     margin-bottom: 30px;
   }
 }
@@ -713,7 +731,7 @@ ul {
 }
 
 .feature__image {
-  width: 450px;
+  width: 100%;
   height: 120px;
   margin-bottom: 30px;
   display: flex;
@@ -993,6 +1011,11 @@ ul {
   margin-right: auto;
   margin-bottom: 60px;
 }
+@media screen and (min-width: 1200px) {
+  .adress__list {
+    margin-bottom: 0px;
+  }
+}
 
 @media screen and (max-width: 1199px) {
   .adress__list .adress__item {
@@ -1184,6 +1207,12 @@ ul {
   border-radius: 4px;
   outline: none;
   display: inline-block;
+}
+@media screen and (min-width: 768px) {
+  .subscribe__input {
+    width: 450px;
+    height: 50px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .subscribe__input {
@@ -1562,13 +1591,31 @@ ul {
   display: flex;
   align-items: center;
   height: 24px;
-  font-family: "Roboto";
-  font-style: normal;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
   color: #757575;
+}
+@media screen and (min-width: 480px) {
+  .coordination__label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .coordination__label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .coordination__label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .coordination__check {
@@ -1603,12 +1650,32 @@ ul {
 .coordination__contract {
   font-family: "Roboto";
   font-style: normal;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
   color: #2196f3;
   margin-left: 7px;
+}
+@media screen and (min-width: 480px) {
+  .coordination__contract {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .coordination__contract {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .coordination__contract {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .button-send {

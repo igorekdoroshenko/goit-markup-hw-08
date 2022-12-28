@@ -29,10 +29,11 @@
     padding-left: 40px;
     padding-top: 48px;
     padding-bottom: 48px;
-    display: block;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
-    height: 796px;
+    height: 100%;
     
     
 }
@@ -55,7 +56,9 @@
     }
 }
 /*--------navigation-------*/
-
+.mob-navigation {
+    // margin-bottom: 302px;
+}
 
 .mob-navigation li {
     margin-bottom: 32px;
@@ -96,7 +99,8 @@
 /*----------contacts------*/
 
 .mob-contact {
-    margin-top: 302px;
+    // margin-top: 302px;
+    
 
 }
 

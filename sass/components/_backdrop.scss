@@ -126,6 +126,8 @@
 
 .coordination {
     width: 100%;
+
+    
     @include flex-align-justify;
 }
 
@@ -135,8 +137,17 @@
 
     height: 24px;
 
-@include font-family;
-    @include font ( $lh:1.71);
+    @include mobile {
+        @include font ($fs: 12, $fw: 400, $lh: 1.17, $ls: 0.03em)
+    }
+    @include tablet {
+        @include font ($fs: 12, $fw: 400, $lh: 1.17, $ls: 0.03em)
+        }
+
+    @include desktop {
+        @include font ($lh: 1.71);
+    }
+    
  
     color: map-get($colors, 'secondary');
 }
@@ -172,7 +183,16 @@
 .coordination__contract {
 @include font-family;
 
-    @include font ( $lh:1.71);
+    @include mobile {
+        @include font ($fs: 12, $fw: 400, $lh: 1.17, $ls: 0.03em)
+    }
+    @include tablet {
+        @include font ($fs: 12, $fw: 400, $lh: 1.17, $ls: 0.03em)
+    }
+    @include desktop {
+        @include font ($lh: 1.71);
+    }
+    
 
     color: map-get($colors, 'accent');
     margin-left: 7px;
